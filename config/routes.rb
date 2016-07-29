@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+    devise_for :users
+
     get 'welcome/index'
     get "users/:id" => "users#show", as: :user
     get "users/:id/edit" => "users#edit", as: :edit_user
 
-    devise_for :users
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
 

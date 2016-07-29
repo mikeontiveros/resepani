@@ -2,23 +2,27 @@
 
 <%= form_for current_user do |f| %>
 
-    <div>
+    <p>
         <%= f.label :name %>
         <%= f.text_field :name %>
-    </div>
+    </p>
 
-    <div>
+    <p>
         <%= f.label :latitude %>
         <%= f.number_field :latitude, :step => 'any' %>
-    </div>
+    </p>
 
-    <div>
+    <p>
         <%= f.label :longitude %>
         <%= f.number_field :longitude, :step => 'any' %>
-    </div>
+    </p>
+
+    <p>
+        <%= f.select :role, [['Parent', 0],['Service Provider', 1],['Other',2]] %><br />
+    </p>
 
     <%= f.submit "Submit these changes!" %>
 
 <% end %>
 
-<%= link_to "Back to root!", root_path %>
+<p><%= link_to "Back to root!", root_path %></p>

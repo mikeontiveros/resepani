@@ -3,6 +3,13 @@
 <p>Name:  <%= current_user.name ||= "none specified" %></p>
 <p>Latitude:  <%= current_user.latitude ||= "none specified" %></p>
 <p>Longitude:  <%= current_user.longitude ||= "none specified" %></p>
+<p>User Type:  <%=  if current_user.role == 0
+                        "Parent"
+                    elsif current_user.role == 0
+                        "Service Provider"
+                    else
+                        "Other"
+                    end %></p>
 
-<%= link_to "Back to root!", root_path %><br>
-<%= link_to "Update profile.", edit_user_path %>
+<%= link_to "Back to root!", root_path %>
+<p><%= link_to "Update profile", edit_user_path %></p>
