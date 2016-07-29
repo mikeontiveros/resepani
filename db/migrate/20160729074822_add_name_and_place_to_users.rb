@@ -1,0 +1,7 @@
+class AddNameAndPlaceToUsers < ActiveRecord::Migration
+    def change
+        add_column :users, :name, :string
+        add_column :users, :latitude, :float
+        add_column :users, :longitude, :float
+    end
+end
