@@ -6,7 +6,9 @@
     <% if current_user.role == 0 %>
         <h2>Parent Options</h2>
         <ul>
-            <li>Update Personal Profile</li>
+            <li><%= link_to "View Personal Profile", user_path(current_user) %></li>
+
+            <li><%= link_to "Update Personal Profile", edit_user_path(current_user) %></li>
             <!- name, latitude, longitude ->
 
             <li>Update Child Profile</li>
@@ -17,10 +19,12 @@
             <!- latitude, longitude, service, rate, desc, datetime ->
 
             <li>Cancel an Event</li>
+
             <li>Browse Events</li>
             <!- Sign up for event via browse ->
 
             <li>Resign from an Event</li>
+
             <li>Message a User</li>
             <!- recipient, subject, body ->
         </ul>
