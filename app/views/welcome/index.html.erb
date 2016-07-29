@@ -1,0 +1,58 @@
+<div id="portal">
+<% if user_signed_in? %>
+
+    <h1>Child Services Network</h1>
+
+    <% if current_user.role == 0 %>
+        <h2>Parent Options</h2>
+        <ul>
+            <li>Update Personal Profile</li>
+            <!- name, latitude, longitude ->
+
+            <li>Update Child Profile</li>
+            <!- name, gender, grade, DOB ->
+            <!- services sought :through child->
+
+            <li>Create an Event for a Child</li>
+            <!- latitude, longitude, service, rate, desc, datetime ->
+
+            <li>Cancel an Event</li>
+            <li>Browse Events</li>
+            <!- Sign up for event via browse ->
+
+            <li>Resign from an Event</li>
+            <li>Message a User</li>
+            <!- recipient, subject, body ->
+        </ul>
+
+    <% elsif current_user.role == 1 %>
+        <h2>Provider Options</h2>
+        <ul>
+            <li>Update Personal Profile</li>
+            <!- name, latitude, longitude ->
+
+            <li>Create an Service Event</li>
+            <!- latitude, longitude, service, rate, desc, datetime ->
+
+            <li>Cancel an Event</li>
+            <li>Browse Events</li>
+            <!- Sign up for event via browse ->
+
+            <li>Resign from an Event</li>
+            <li>Message a User</li>
+            <!- recipient, subject, body ->
+        </ul>
+
+    <% end %>
+
+<% else %>
+    <h1>Welcome to the Child Services Network</h1>
+
+    <h2>What we do</h2>
+
+    <p>Our purpose is to enable parents and child service providers to connect to a local network of parents and providers for the purpose of coordinating with one another on matters pertaining to child care.</p>
+
+    <p>Users may create events pertaining to child care, browse events created by other users, send messages to other users, and sign up for posted events.</p>
+
+<% end %>
+</div>
