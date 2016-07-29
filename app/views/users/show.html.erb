@@ -5,7 +5,7 @@
 <p>Longitude:  <%= current_user.longitude ||= "none specified" %></p>
 <p>User Type:  <%=  if current_user.role == 0
                         "Parent"
-                    elsif current_user.role == 0
+                    elsif current_user.role == 1
                         "Service Provider"
                     else
                         "Other"
