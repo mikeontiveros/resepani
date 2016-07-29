@@ -1,0 +1,15 @@
+<h2>All My Children</h2>
+
+<% if current_user.children.count == 0 %>
+    <p>No children added yet</p>
+<% else %>
+    <% current_user.children.each do |child| %>
+        <p>
+            <%= child.name %>: <%= if child.gender == 0; "girl"; else; "boy"; end %> born on <%= child.dob %><br>
+            <%= link_to "(Remove)", child_path(child), method: :delete, data: { confirm: "Are you sure you want to remove this child?"} %>
+        </p>
+    <% end %>
+<% end %>
+
+<p><%= link_to "Add a child", new_child_path %></p>
+<p><%= link_to "Back to root!", root_path %></p>

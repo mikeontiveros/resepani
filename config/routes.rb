@@ -7,6 +7,12 @@ Rails.application.routes.draw do
     get "users/:id/edit" => "users#edit", as: :edit_user
     patch "users/:id" => "users#update"
 
+    get "children/" => "children#index"
+    get "children/new" => "children#new", as: :new_child
+    get "children/:id" => "children#show", as: :child
+    post "children/" => "children#create"
+    delete "children/:id" => "children#destroy"
+
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
 

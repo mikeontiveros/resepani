@@ -1,0 +1,23 @@
+<h2>Add a new child</h2>
+
+<%= form_for @child do |f| %>
+
+    <p>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </p>
+
+    <p>
+        <%= f.select :gender, [['Girl', 0],['Boy', 1]] %>
+    </p>
+
+    <p>
+        <%= f.label "Date of birth" %>
+        <%= f.date_field :dob %>
+    </p>
+
+    <%= f.submit "Add child" %>
+
+<% end %>
+
+<p><%= link_to "Back to my children", children_path %></p>

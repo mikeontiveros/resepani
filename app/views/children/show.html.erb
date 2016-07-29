@@ -1,0 +1,4 @@
+<%= @child.name %>: <%= if @child.gender == 0; "girl"; else; "boy"; end %> born on <%= @child.dob %>
+
+<p><%= link_to "Back to my children", children_path %></p>
+<p><%= link_to "Back to root!", root_path %></p>
