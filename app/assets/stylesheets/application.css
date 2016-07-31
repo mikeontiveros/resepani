@@ -13,6 +13,17 @@
  *= require_tree .
  *= require_self
  */
-#upinout {
+h1 {
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+
+#notices {
     text-align: center;
 }
+
+#user_view {
+    width: 640px;
+    margin: 0 auto;
+}
+

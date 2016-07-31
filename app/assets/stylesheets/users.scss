@@ -1,3 +1,22 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.devise_button {
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background-color: violet;
+    border: none;
+    padding: 8px 16px;
+}
+.devise_field_box {
+    font-size: 16px;
+    height: 24px;
+    width: 250px;
+    margin: 6px 0;
+}
+.devise_view {
+    width: 300px;
+    margin: 40px auto;
+}
