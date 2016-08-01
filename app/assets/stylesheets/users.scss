@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.devise_button {
+.submit_button {
     font-size: 16px;
     text-align: center;
     color: white;
@@ -10,7 +10,7 @@
     border: none;
     padding: 8px 16px;
 }
-.devise_field_box {
+.field_box {
     font-size: 16px;
     height: 24px;
     width: 250px;
@@ -19,4 +19,41 @@
 .devise_view {
     width: 300px;
     margin: 40px auto;
+}
+.select_box {
+    font-size: 32px;
+    width: 200px;
+    margin: 0 20px;
+}
+.nav_footer {
+    width: 320px;
+    margin: 40px auto;
+}
+.nav_left .nav_mid .nav_right {
+    display: inline-block;
+}
+.nav_left {
+    float: left;
+}
+.nav_mid {
+    text-align: center;
+}
+.nav_right {
+    float: right;
+}
+table {
+    width: 80%;
+    margin: 0 auto;
+}
+th {
+    width: 20%;
+    text-align: left;
+}
+td {
+    width: 80%;
+    text-align: right;
+}
+tr {
+    height: 36px;
+    vertical-align: middle;
 }

@@ -7,7 +7,7 @@
 
     <div class="field"><p>
         <%= f.label "E-mail" %><br />
-        <%= f.email_field :email, autofocus: true, :class => 'devise_field_box' %>
+        <%= f.email_field :email, autofocus: true, :class => 'field_box' %>
     </p></div>
 
     <div class="field"><p>
@@ -15,16 +15,16 @@
         <% if @minimum_password_length %>
             <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "off", :class => 'devise_field_box' %>
+        <%= f.password_field :password, autocomplete: "off", :class => 'field_box' %>
     </p></div>
 
     <div class="field"><p>
         <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'devise_field_box' %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'field_box' %>
     </p></div>
 
     <div class="actions"><p>
-        <%= f.submit "Sign up", :class => 'devise_button' %>
+        <%= f.submit "Sign up", :class => 'submit_button' %>
     </p></div>
 
 <% end %>

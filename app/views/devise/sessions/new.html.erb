@@ -5,12 +5,12 @@
 
     <div class="field"><p>
         <%= f.label "E-mail" %><br />
-        <%= f.email_field :email, autofocus: true, :class => 'devise_field_box' %>
+        <%= f.email_field :email, autofocus: true, :class => 'field_box' %>
     </p></div>
 
     <div class="field"><p>
         <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off", :class => 'devise_field_box' %>
+        <%= f.password_field :password, autocomplete: "off", :class => 'field_box' %>
     </p></div>
 
     <% if devise_mapping.rememberable? -%>
@@ -21,7 +21,7 @@
     <% end -%>
 
     <div class="actions"><p>
-        <%= f.submit "Sign in", :class => 'devise_button' %>
+        <%= f.submit "Sign in", :class => 'submit_button' %>
     </p></div>
 
 <% end %>

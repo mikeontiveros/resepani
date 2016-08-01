@@ -1,15 +1,35 @@
 <h2>Profile for <%= current_user.email %></h2>
 
-<p>Name:  <%= current_user.name ||= "none specified" %></p>
-<p>Latitude:  <%= current_user.latitude ||= "none specified" %></p>
+<table>
+    <tr>
+        <th>First Name:</th><td><%= current_user.first_name ||= "none specified" %></td>
+    </tr>
+    <tr>
+        <th>Address:</th><td><%= current_user.first_name ||= "none specified" %></td>
+    </tr>
+
+
+
+<!-- USE GEOCODER TO GET LATITUDE & LONGITUDE -->
+<!-- <p>Latitude:  <%= current_user.latitude ||= "none specified" %></p>
 <p>Longitude:  <%= current_user.longitude ||= "none specified" %></p>
-<p>User Type:  <%=  if current_user.role == 0
+ -->
+<!-- USE GEOCODER TO GET LATITUDE & LONGITUDE -->
+
+
+
+    <tr>
+        <th>Mode:</th><td><%=  if current_user.role == 0
                         "Parent"
                     elsif current_user.role == 1
                         "Service Provider"
                     else
                         "Other"
-                    end %></p>
+                    end %></td>
+    </tr>
+</table>
 
-<%= link_to "Back to root!", root_path %>
-<p><%= link_to "Update profile", edit_user_path %></p>
+<div class="nav_footer">
+    <div class="nav_left"><%= link_to "Home", root_path %></div>
+    <div class="nav_right"><%= link_to "Update profile", edit_user_path %></div>
+</div>
