@@ -1,0 +1,27 @@
+<%= form_tag users_path, :method => :get do %>
+<table>
+    <tr>
+        <th>Street, City, State</th><td><%= text_field_tag :search, params[:search], :value => @search ||= current_user.address, :class => 'field_box' %></td>
+    </tr>
+    <tr>
+        <th>Radius in miles</th><td><%= text_field_tag :radius, params[:radius], :value => @radius ||= 10, :class => 'field_box' %></td>
+    </tr>
+    <tr>
+        <th></th><td><%= submit_tag "Search Near", :name => nil, :class => 'submit_button' %></td>
+    </tr>
+</table>
+<% end %>
+
+<h3>Members Within <%= @radius %> miles of:<br />
+<%= @search %></h3>
+<table>
+<tr><th>Member</th><td>Distance (miles)</td></tr>
+<% if @users.length == 0 %>
+    <tr><th>No match results.</th><td></td></tr>
+<% else %>
+    <% for user in @users %>
+        <% userlink = "users/#{user.id}" %>
+        <tr><th><%= link_to user.email, userlink %></th><td><%= user.distance.round(2) %></td></tr>
+    <% end %>
+<% end %>
+</table>

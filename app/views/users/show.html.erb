@@ -1,11 +1,11 @@
-<h2>Profile for <%= current_user.email %></h2>
+<h2>Profile for <%= @user.email %></h2>
 
 <table>
     <tr>
-        <th>First Name:</th><td><%= current_user.first_name ||= "none specified" %></td>
+        <th>First Name:</th><td><%= @user.first_name ||= "none specified" %></td>
     </tr>
     <tr>
-        <th>Address:</th><td><%= current_user.first_name ||= "none specified" %></td>
+        <th>Address:</th><td><%= @user.address ||= "none specified" %></td>
     </tr>
 
 
@@ -19,9 +19,9 @@
 
 
     <tr>
-        <th>Mode:</th><td><%=  if current_user.role == 0
+        <th>Mode:</th><td><%=  if @user.role == 0
                         "Parent"
-                    elsif current_user.role == 1
+                    elsif @user.role == 1
                         "Service Provider"
                     else
                         "Other"
@@ -31,5 +31,9 @@
 
 <div class="nav_footer">
     <div class="nav_left"><%= link_to "Home", root_path %></div>
-    <div class="nav_right"><%= link_to "Update profile", edit_user_path %></div>
+    <% if @user.id == current_user.id %>
+        <div class="nav_right"><%= link_to "Update profile", edit_user_path %></div>
+    <% else %>
+        <div class="nav_right"><%= link_to "Member Search", users_path %></div>
+    <% end %>
 </div>

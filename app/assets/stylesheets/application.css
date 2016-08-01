@@ -20,11 +20,11 @@ h1 {
 
 #notices {
     clear: both;
-    margin: 100px auto;
+    margin: 40px auto;
     text-align: center;
 }
 
 #user_view {
     width: 640px;
-    margin: 0 auto;
+    margin: 0 auto 80px auto;
 }

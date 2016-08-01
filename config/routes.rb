@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     devise_for :users
 
     get 'welcome/index'
+    get "users/" => "users#index", as: :users
     get "users/:id" => "users#show", as: :user
     get "users/:id/edit" => "users#edit", as: :edit_user
     patch "users/:id" => "users#update"
